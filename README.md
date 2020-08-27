@@ -78,6 +78,10 @@ BorderLayout和Flowlayout是比较简单常用的布局管理器，基本上可�
 BoxLayout，CardLayout，Gridlayout，GridBagLayout，GroupLayout和SpringLayout等是稍微复杂的局部管理器，综合利用这些
 布局管理器，可以实现各种复杂界面的布局管理
 
+列表框
 
+列表框可以把一系列的条目组织起来，供用户选择/
+列表框的展示形式时多样的，它可以把所有的条目都放在同一列展示，也可以分为多列展示这些条目，而且列表框还可以响应用户的选择
+事件。
 
 
