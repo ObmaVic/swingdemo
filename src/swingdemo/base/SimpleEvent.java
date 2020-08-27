@@ -25,7 +25,7 @@ public class SimpleEvent {
         /**5.显示窗体框架界面*/
         jFrame.setVisible(true);
     }
-    //事件处理内部类
+    /**事件处理内部类*/
     class ClickAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
