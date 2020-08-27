@@ -2,7 +2,7 @@
 java报表的开发
 
 菜单说明：
-swingdemo——test1：
+swingdemo——test1：Swing开发基础
 
 基础的技能get：
 
