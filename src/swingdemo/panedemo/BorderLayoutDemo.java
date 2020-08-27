@@ -1,4 +1,4 @@
-package swingdemo.test1;
+package swingdemo.panedemo;
 
 import javax.swing.*;
 import java.awt.*;

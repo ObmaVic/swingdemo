@@ -1,6 +1,4 @@
-package swingdemo.test1;
-
-import com.sun.javaws.util.JfxHelper;
+package swingdemo.base;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

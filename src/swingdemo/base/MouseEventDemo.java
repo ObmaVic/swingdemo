@@ -1,4 +1,4 @@
-package swingdemo.test1;
+package swingdemo.base;
 
 import javax.swing.*;
 import java.awt.event.MouseEvent;
