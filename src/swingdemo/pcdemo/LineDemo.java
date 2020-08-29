@@ -3,6 +3,8 @@ package swingdemo.pcdemo;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.CubicCurve2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
 
 /**
  * @Description 直线线条绘制过程
@@ -30,15 +32,16 @@ public class LineDemo {
 }
 
 class PaintPanel extends JPanel {
-    public void paintCompontent(Graphics graphics) {
+    @Override
+    public void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
         Graphics2D graphics2D = (Graphics2D) graphics;
         //绘制直线的方法
        // Line2D.Double line = new Line2D.Double(10.0, 20.0, 200.0, 80.0);
-     /*   Point2D.Double begin = new Point2D.Double(10.0, 20.0);
+        Point2D.Double begin = new Point2D.Double(10.0, 20.0);
         Point2D.Double end = new Point2D.Double(100.0, 80.0);
         Line2D.Double line = new Line2D.Double(begin, end);
-        graphics2D.draw(line);*/
+        graphics2D.draw(line);
         //绘制曲线的方法
         CubicCurve2D.Double cubic2D = new CubicCurve2D.Double();
         /**
@@ -46,7 +49,7 @@ class PaintPanel extends JPanel {
          * （200.0,80.0）是终点的坐标
          * （60.0,70.0）和（100.0,10.0）是曲线中间经过的两个坐标
          */
-        cubic2D.setCurve(10.0, 20.0, 60.0, 70.0, 100.0, 10.0, 200.0, 80.0);
-        graphics2D.draw(cubic2D);
+        /*cubic2D.setCurve(10.0, 20.0, 60.0, 70.0, 100.0, 10.0, 200.0, 80.0);
+        graphics2D.draw(cubic2D);*/
     }
 }
