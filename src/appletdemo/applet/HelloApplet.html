@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Applet</title>
+</head>
+<body>
+<!--对Applet标签的各个属性进行简单的说明
+code标志：指定Applet的类名
+width和height标志：指定Applet窗口的像素尺寸
+codeBase标志：指定Applet的url地址，
+    applet的通用资源定位地址url，它可以是绝对地址(www.sun.com)
+    耶可以是相对于当前html所在目录的相对地址（/appletpath/name）
+    如果html文件不指定codeBase标志，则浏览器将使用html文件相同的url
+alt标志：如果某浏览器无法运行java Applet，那么在遇到Applet语句时将显示alt标志指定的文本信息
+align标志：align标志可以用来控制把Applet窗口显示在html文档窗口的什么位置
+vspace与hspace标志：指定浏览器显示在Applet窗口周围的水平和垂直空白条的尺寸，单位为像素
+name标志：把指定的名字赋予Applet当前实例。
+当浏览器同时运行两个或多个Applet时，各Applet可通过名字相互引用或交互信息。
+如果忽略name标志，Applet的名字将对应于其类名
+param标志:指定在html页面中给Applet传递的参数
+-->
+<!--
+在编写Applet时候尽量不要使用package，这样可以避免出现浏览器找不到类文件，
+但如果一定要使用package的话，需要把整个package的文件全部复制到调用html文件所在的目录
+-->
+    <applet code="HelloApplet.class" width="200" height="80"></applet>
+</body>
+</html>
