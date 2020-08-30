@@ -41,7 +41,7 @@ jFrame.setVisible(true);
 
 对于主类的主程序，也应该用一个单独的线程来运行。
 
-四：Swing容器
+第二章：Swing容器
 
 在Swing容器中提供了丰富的容器组件，顶级容器JFrame的内容窗格可以放置任何其他的组件
 
@@ -98,5 +98,72 @@ BoxLayout，CardLayout，Gridlayout，GridBagLayout，GroupLayout和SpringLayout
 表格（JTable)组件是Swing中最复杂，功能最强大的组件之一。
 使用表格组件不仅可以创建最基本的表格，而且可以创建各种特殊样式和功能的
 复杂表格。
+
+第三章
+Java2D图形设计基础
+在报表开发中，图形报表的开发占据着非常重要的作用，一般情况下可以采用第三方形式报表插件进行开发
+
+LineDemo.java  绘制2D线条示例程序
+RectangleDemo.java 绘制矩形示例程序
+EllipseDemo.java   圆形示例程序
+ColorDemo.java    颜色填充示例程序
+BorderDemo.java   设置图形边框示例程序
+LocalFonts.java   获取本地系统自带字体列表
+FontDemo.java     定值文本风格示例程序
+
+jdk的开发目的是为了支持多平台，所以只开发了最原始的公共功能，从而保证java程序在各个操作系统平台之间都
+可以运行
+
+Java2D API是Java2平台的核心组件，它的出现增强了java图形开发的能力
+
+JFC和Java2D
+Java基础类（jfc）是一组API，在1.1中作为单独的库引入，在Java2平台中则为核心
+
+AWT是提供给Java程序员用于构建GUI应用程序的原始方法
+
+JFC库包含的模块
+Swing组件集
+可访问性API
+拖放API
+Java2DAPI
+
+Java2D提供的功能
+对渲染质量的控制
+裁剪、合成和透明度
+绘制和填充简单及复杂的形状
+图像处理和变换
+高级字体处理和字符串格式化
+
+Graphics类
+是AWT中的一个抽象类，也是图形绘制的一个基类
+
+主要特性
+Color
+Font
+Clip
+ClipBounds
+FontMetrics
+PaintMode
+
+Graphics2D类
+不仅提供了基类中所有的功能，还提供了2D中独有的特性
+Background
+RenderingHints
+Paint
+Stroke
+Transform
+Composite
+
+Java2D文本字体支持
+1.物理字体
+物理字体就是操作系统中实际存在的字体，在Java中可以自由调用操作系统中已经存在的各种字体。
+物理字体可以使用字体名称，如Helvetica，Palatino，HonMincho或任意数量的其他字体名称
+
+2.逻辑字体
+为了保证Java程序的跨平台运行，在Java的AWT中，定义了5种逻辑字体：Serif，SansSerif，Monospaced，Dialog和DialogInput
+这些逻辑字体不是实际的字体库，而是由Java运行环境将逻辑字体名称映射到物理字体，
+映射关系与实际和通常语言环境相关，因此，他们提供的外观和规格个不相同
+
+
 
 
