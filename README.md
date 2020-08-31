@@ -164,6 +164,60 @@ Java2D文本字体支持
 这些逻辑字体不是实际的字体库，而是由Java运行环境将逻辑字体名称映射到物理字体，
 映射关系与实际和通常语言环境相关，因此，他们提供的外观和规格个不相同
 
+第四章
+JavaWeb开发基础
+
+目前软件开发中，B/S架构已经成为首选的系统架构，而在web开发领域中，Java语言仍占据着非常大的比例。
+JavaApplet，JavaBean，jsp和Servlet，
+尤其是applet，这是在网页中自己动手绘制图形的首选方式
+
+HelloApplet.java  HelloApplet.html  最简单的javaApplet示例展示
+LifeCycle.java LifeCycle.html  java Applet的生命周期示例程序
+paintApplet.java  PaintApplet.html  java Applet中绘制图形示例程序
+Simple.jsp   最简单的jsp示例展示
+IncludeAction.jsp  header.txt  footer.jsp  jsp动作指令include示例程序
+PassParam.jsp  GetParam.jsp    jsp指令page示例程序
+Include.jsp   jsp指令page示例程序
+Request.jsp   jsp内置对象request使用示例
+Redirect.jsp  jsp内置对象response使用示例
+Counter.jsp  jsp内置对象application使用示例
+download.jsp  downloadAction.jsp  jsp文件下载示例
+circle.java  javaBean典型示例
+Person.java  javaBean编码规则示例程序
+HelloWorld.java  HelloWorld.jsp  jsp+javaBean综合应用
+HelloWorld,java   最简单的servlet示例展示
+SetCharacterEncodingFilter.java  转换中文字符编码过滤器示例程序
+PageCharset.jsp  jsp页面中文乱码处理方法
+URLCharset.jsp  页面之间传递中文参数乱码处理方法
+
+4.1 JavaApplet
+
+applet即小应用程序，JavaApplet就是用java语言编写的一些小应用程序，可以直接嵌入到页面中，并能产生特殊的效果
+当用户访问嵌入javaapplet的网页时，applet被下载到用户的计算机上执行（前提示用户使用的是支持java的浏览器）
+
+在JavaAPPlet中，可以实现图形绘制，字体和颜色控制，动画和声音的插入，人机交互及网络交流等功能。
+applet还提供了抽象窗口工具箱（abstract window toolkit ，AWT）的窗口环境开发工具
+
+AWT可以利用用户计算机的GUI元素，建立标准的图形用户界面，如窗口，按钮，滚动条等
+
+applet小程序可以分为两种：
+一种是基于AWT组件的
+一种是基于Swing组件的
+
+4.2Java Applet的生命周期
+java Applet生命周期基本可以分为4个阶段，其中每个阶段都对应一个基本方法，applet类通过4个基本方法来控制其运行状态：init(),start(),stop(),destory()
+1.init()方法，这个方法主要是为了Applet的正常运行做一些初始化，当一个Applet被系统调用时，系统首先调用的就是该方法。
+可以在该方法中完成从网页向Applet传递参数，添加用户界面的基本组件等操作。
+2.start()方法，系统在调用完init()方法之后，将自动调用start()方法。
+这就意味着start()方法可以多次被执行，而不像init()方法。因此，可把只能执行
+一遍的代码放在init()方法中，而在start()方法中开始一个线程，如继续一个动画、声音等
+3.stop()方法，这个方法在用户离开Applet所在页面时执行，因此，它可以是多次执行的。
+它可以在用户并不注意Applet时，停止一些耗用系统资源的工作以免影响系统的运行速度，并且不需要人为地去调用该方法
+如果Applet中不包含动画，声音等程序，通常也不必实现该方法
+4.destory().与对象的finalize()方法不同，java在浏览器关闭的时候才调用该方法。
+Applet是嵌在html文件中的，所以destroy()方法不关心何时Applet被关闭，它在浏览器关闭的时候自动执行。
+在destroy()方法中一般可以要求收回占用的非内存独立资源。
+如果在Applet运行时浏览器被关闭，系统将先执行stop()方法，再执行destory()方法
 
 
 

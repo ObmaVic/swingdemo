@@ -8,6 +8,7 @@ import javax.swing.*;
  * @Date 2020/8/30 17:10
  */
 public class HelloApplet extends JApplet {
+   // <applet code="HelloApplet.class" width="200" height="80"></applet>
     /**
      * Applet中有4个主要的函数，分别为：init，start，stop和destroy，
      * init相当于普通Java程序中的main函数
